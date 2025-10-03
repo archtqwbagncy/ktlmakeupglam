@@ -5,16 +5,16 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img src={logo} alt="KTL Makeup Glam" className="h-12 w-auto" />
-              <span className="text-xl font-bold">KTL Makeup Glam</span>
+              <span className="text-xl font-bold text-foreground">KTL Makeup Glam</span>
             </div>
-            <p className="text-background/80 leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               Professional makeup artistry services serving JHB South and Alberton.
               Making you look and feel your absolute best.
             </p>
@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-1" />
-                <div className="text-background/80">
+                <div className="text-muted-foreground">
                   71 Le Maitre Street
                   <br />
                   Brackenhurst, Alberton
@@ -36,11 +36,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-background/80">+27 123 456 789</span>
+                <span className="text-muted-foreground">+27 123 456 789</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="text-background/80">info@ktlmakeupglam.co.za</span>
+                <span className="text-muted-foreground">info@ktlmakeupglam.co.za</span>
               </div>
             </div>
           </div>
@@ -51,31 +51,31 @@ const Footer = () => {
             <div className="space-y-2">
               <a
                 href="#home"
-                className="block text-background/80 hover:text-primary transition-colors"
+                className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Home
               </a>
               <a
                 href="#why-choose-us"
-                className="block text-background/80 hover:text-primary transition-colors"
+                className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Why Choose Us
               </a>
               <a
                 href="#services"
-                className="block text-background/80 hover:text-primary transition-colors"
+                className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Services
               </a>
               <a
                 href="#about"
-                className="block text-background/80 hover:text-primary transition-colors"
+                className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 About
               </a>
               <a
                 href="#booking"
-                className="block text-background/80 hover:text-primary transition-colors"
+                className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Booking
               </a>
@@ -84,8 +84,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-background/20 pt-8 text-center">
-          <p className="text-background/70">
+        <div className="border-t border-border pt-8 text-center">
+          <p className="text-muted-foreground">
             © {currentYear} KTL Makeup Glam. All rights reserved.
           </p>
         </div>

@@ -8,45 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Luxury Gold & Cream Color Palette */
-    --background: 36 33% 97%;
-    --foreground: 0 0% 15%;
+    /* Dark & Gold Color Palette - Based on Logo */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
     --primary: 43 74% 52%;
-    --primary-foreground: 0 0% 100%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 30 25% 88%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 36 20% 92%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
 
     --accent: 43 74% 52%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 85%;
-    --input: 30 15% 90%;
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
     --ring: 43 74% 52%;
 
     --radius: 0.75rem;
 
-    /* Luxury gradients */
+    /* Dark gradients */
     --gradient-gold: linear-gradient(135deg, hsl(43 74% 52%) 0%, hsl(43 74% 62%) 100%);
-    --gradient-cream: linear-gradient(180deg, hsl(36 33% 97%) 0%, hsl(30 25% 95%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 10%) 0%, hsl(0 0% 20%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
+    --gradient-dark-overlay: linear-gradient(90deg, hsl(0 0% 8% / 0.95) 0%, hsl(0 0% 8% / 0.7) 100%);
 
-    /* Luxury shadows */
-    --shadow-gold: 0 10px 40px -10px hsl(43 74% 52% / 0.3);
-    --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.2);
+    /* Dark shadows */
+    --shadow-gold: 0 10px 40px -10px hsl(43 74% 52% / 0.4);
+    --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.6);
 
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
