@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
+import softGlamImage from "@/assets/soft-glam.png";
+import fullGlamImage from "@/assets/full-glam.png";
+import weddingGlamImage from "@/assets/wedding-glam.png";
+import matricDanceImage from "@/assets/matric-dance.png";
+import officialPhotoGlamImage from "@/assets/official-photo-glam.png";
+import trialMakeupImage from "@/assets/trial-makeup.png";
+import stripMinkLashesImage from "@/assets/strip-mink-lashes.png";
 
 const services = [
   {
@@ -7,34 +14,48 @@ const services = [
     price: "R440",
     description:
       "A natural look with a touch of elegance, perfect for day-to-day wear or casual events.",
+    image: softGlamImage,
   },
   {
     name: "Full Glam",
     price: "R520",
     description: "A bold, polished look for special occasions and nights out.",
+    image: fullGlamImage,
   },
   {
-    name: "Wedding Glam (Bride)",
-    price: "R550",
+    name: "Wedding Glam",
+    price: "Bride: R550 | Bridesmaids: R400",
     description:
-      "A flawless bridal look designed to last through your special day.",
+      "Flawless bridal looks designed to last through your special day, plus elegant coordinated makeup for your bridal party.",
+    image: weddingGlamImage,
   },
   {
-    name: "Bridesmaids",
-    price: "R400",
-    description: "Elegant, coordinated makeup looks for your bridal party.",
+    name: "Trial Makeup",
+    price: "R350",
+    description:
+      "Perfect your look before the big day. Trial sessions help us understand your vision and preferences.",
+    image: trialMakeupImage,
+  },
+  {
+    name: "Strip Mink Lashes",
+    price: "R150",
+    description:
+      "Add drama and definition to your eyes with premium strip mink lashes for a glamorous finish.",
+    image: stripMinkLashesImage,
   },
   {
     name: "Matric Dance",
     price: "R400",
     description:
       "Stand out at your matric farewell with a glamorous, age-appropriate look.",
+    image: matricDanceImage,
   },
   {
     name: "Official Photo Glam",
     price: "R390",
     description:
       "Camera-ready makeup for graduations, photoshoots, and corporate images.",
+    image: officialPhotoGlamImage,
   },
   {
     name: "Birthday Glam",
@@ -94,7 +115,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={service.name}
-              className={`p-6 hover:shadow-gold transition-all duration-500 hover:scale-105 group cursor-pointer border-2 border-transparent hover:border-primary ${
+              className={`overflow-hidden hover:shadow-gold transition-all duration-500 hover:scale-105 group cursor-pointer border-2 border-transparent hover:border-primary ${
                 isVisible
                   ? "animate-scale-in"
                   : "opacity-0"
@@ -103,17 +124,28 @@ const Services = () => {
                 animationDelay: `${index * 100}ms`,
               }}
             >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                  {service.name}
-                </h3>
-                <span className="text-2xl font-bold text-primary">
-                  {service.price}
-                </span>
+              {service.image && (
+                <div className="w-full h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              )}
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    {service.name}
+                  </h3>
+                  <span className="text-lg font-bold text-primary whitespace-nowrap ml-2">
+                    {service.price}
+                  </span>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
             </Card>
           ))}
         </div>
