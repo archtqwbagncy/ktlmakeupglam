@@ -29,11 +29,15 @@ const About = () => {
   }, []);
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/27123456789", "_blank");
+    window.open("https://wa.me/27647081562", "_blank");
   };
 
   const handleCall = () => {
-    window.location.href = "tel:+27123456789";
+    window.location.href = "tel:+27647081562";
+  };
+
+  const handleMapLocation = () => {
+    window.open("https://www.google.com/maps/search/?api=1&query=71+Le+Maitre+Street+Brackenhurst+Alberton+1448", "_blank");
   };
 
   return (
@@ -83,7 +87,7 @@ const About = () => {
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-secondary/50 p-6 rounded-xl">
+                <div className="bg-secondary/50 p-6 rounded-xl cursor-pointer hover:bg-secondary/70 transition-colors" onClick={handleMapLocation}>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-primary/10 rounded-full">
                       <MapPin className="w-5 h-5 text-primary" />
@@ -99,6 +103,7 @@ const About = () => {
                     <br />
                     1448
                   </p>
+                  <p className="text-primary text-sm mt-2">Click to view map →</p>
                 </div>
 
                 <div className="bg-secondary/50 p-6 rounded-xl">

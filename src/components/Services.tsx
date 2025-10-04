@@ -7,6 +7,7 @@ import matricDanceImage from "@/assets/matric-dance.png";
 import officialPhotoGlamImage from "@/assets/official-photo-glam.png";
 import trialMakeupImage from "@/assets/trial-makeup.png";
 import stripMinkLashesImage from "@/assets/strip-mink-lashes.png";
+import birthdayGlamImage from "@/assets/birthday-glam.png";
 
 const services = [
   {
@@ -61,6 +62,7 @@ const services = [
     name: "Birthday Glam",
     price: "R450",
     description: "Celebrate in style with a makeup look tailored for your big day.",
+    image: birthdayGlamImage,
   },
 ];
 
