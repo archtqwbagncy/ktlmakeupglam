@@ -34,10 +34,13 @@ const Footer = () => {
                   1448
                 </div>
               </div>
-              <div className="flex items-center gap-3">
+              <a 
+                href="tel:+27647081562" 
+                className="flex items-center gap-3 hover:text-primary transition-colors cursor-pointer"
+              >
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">+27 123 456 789</span>
-              </div>
+                <span className="text-muted-foreground hover:text-primary">064 708 1562</span>
+              </a>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <span className="text-muted-foreground">info@ktlmakeupglam.co.za</span>

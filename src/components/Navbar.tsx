@@ -60,7 +60,7 @@ const Navbar = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -71,6 +71,12 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
+            <a
+              href="tel:+27647081562"
+              className="text-primary hover:text-primary/80 transition-colors duration-300 font-bold flex items-center gap-2 border border-primary px-4 py-2 rounded-lg hover:bg-primary/10"
+            >
+              <span>064 708 1562</span>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,6 +105,12 @@ const Navbar = () => {
                   {link.label}
                 </button>
               ))}
+              <a
+                href="tel:+27647081562"
+                className="text-primary hover:text-primary/80 transition-colors duration-300 font-bold px-4 py-2 text-left border border-primary rounded-lg hover:bg-primary/10 mx-4"
+              >
+                064 708 1562
+              </a>
             </div>
           </div>
         )}

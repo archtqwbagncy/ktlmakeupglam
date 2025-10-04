@@ -136,11 +136,11 @@ const Services = () => {
                 </div>
               )}
               <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
                     {service.name}
                   </h3>
-                  <span className="text-lg font-bold text-primary whitespace-nowrap ml-2">
+                  <span className="text-lg font-bold text-primary block">
                     {service.price}
                   </span>
                 </div>
