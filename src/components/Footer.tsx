@@ -120,6 +120,9 @@ const Footer = () => {
           <p className="text-muted-foreground">
             © {currentYear} KTL Makeup Glam. All rights reserved.
           </p>
+          <p className="text-muted-foreground text-sm mt-2">
+            Built by <span className="text-primary font-medium">Architeq Web Agency</span>
+          </p>
         </div>
       </div>
     </footer>
