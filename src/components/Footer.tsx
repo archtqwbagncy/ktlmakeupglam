@@ -41,10 +41,13 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary" />
                 <span className="text-muted-foreground hover:text-primary">064 708 1562</span>
               </a>
-              <div className="flex items-center gap-3">
+              <a 
+                href="mailto:ktlmakeupglam@gmail.com" 
+                className="flex items-center gap-3 hover:text-primary transition-colors cursor-pointer"
+              >
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">info@ktlmakeupglam.co.za</span>
-              </div>
+                <span className="text-muted-foreground hover:text-primary">ktlmakeupglam@gmail.com</span>
+              </a>
             </div>
           </div>
 

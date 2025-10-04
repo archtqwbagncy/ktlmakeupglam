@@ -67,8 +67,34 @@ const BookingForm = () => {
       return;
     }
 
+    // Format the booking details for WhatsApp
+    const date = new Date(formData.dateTime);
+    const formattedDate = date.toLocaleDateString('en-ZA', { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+    const formattedTime = date.toLocaleTimeString('en-ZA', { 
+      hour: '2-digit', 
+      minute: '2-digit' 
+    });
+
+    const message = `*New Booking Request*%0A%0A` +
+      `*Name:* ${formData.name}%0A` +
+      `*Email:* ${formData.email}%0A` +
+      `*Phone:* ${formData.phone}%0A` +
+      `*Service:* ${formData.service}%0A` +
+      `*Date:* ${formattedDate}%0A` +
+      `*Time:* ${formattedTime}%0A` +
+      `*Travel Service:* ${formData.travelService ? 'Yes' : 'No'}%0A` +
+      (formData.notes ? `*Notes:* ${formData.notes}%0A` : '');
+
+    // Open WhatsApp with pre-filled message
+    window.open(`https://wa.me/27647081562?text=${message}`, '_blank');
+
     // Success message
-    toast.success("Booking request submitted successfully! We'll contact you soon.");
+    toast.success("Opening WhatsApp to send your booking request!");
     
     // Reset form
     setFormData({
