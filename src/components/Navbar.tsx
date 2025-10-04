@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/ktl-logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +14,10 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    
+    // Trigger animation on mount
+    setTimeout(() => setIsVisible(true), 100);
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -40,11 +46,12 @@ const Navbar = () => {
 
   return (
     <nav
+      ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-card/95 backdrop-blur-md shadow-elegant"
           : "bg-transparent"
-      }`}
+      } ${isVisible ? "animate-fade-in" : "opacity-0"}`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">

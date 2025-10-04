@@ -113,7 +113,7 @@ const Services = () => {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={service.name}

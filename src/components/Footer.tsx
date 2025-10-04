@@ -1,12 +1,38 @@
+import { useEffect, useRef, useState } from "react";
 import logo from "@/assets/ktl-logo.png";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [isVisible, setIsVisible] = useState(false);
+  const footerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <footer className="bg-card border-t border-border py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <footer ref={footerRef} className="bg-card border-t border-border py-12">
+      <div className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+        isVisible ? "animate-fade-in" : "opacity-0"
+      }`}>
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>

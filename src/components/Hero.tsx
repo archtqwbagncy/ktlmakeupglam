@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-secondary/20"
     >
       {/* Content Grid */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">

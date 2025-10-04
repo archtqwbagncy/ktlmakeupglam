@@ -81,11 +81,10 @@ const WhyChooseUs = () => {
                   <Heart className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    We know the frustration of inconsistent results and impersonal
-                    service.
-                  </p>
-                  <p className="text-foreground leading-relaxed font-medium">
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    We know the frustration of inconsistent results and impersonal service.
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
                     At KTL Makeup Glam, we offer personalized makeup services that
                     cater to your individual needs, ensuring you look and feel your
                     best for any occasion.
@@ -106,11 +105,9 @@ const WhyChooseUs = () => {
                   <Award className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-foreground leading-relaxed font-medium mb-3">
-                    Our expert makeup artist provides consistent, high-quality
-                    results every time, making your beauty experience stress-free
-                    and enjoyable.
-                  </p>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    Our expert makeup artist provides consistent, high-quality results every time, making your beauty experience stress-free and enjoyable.
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Whether it's a full face beat or a soft glam look, our attention
                     to detail and commitment to excellence ensures you leave feeling
