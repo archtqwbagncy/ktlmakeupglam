@@ -16,12 +16,12 @@ import { toast } from "sonner";
 const services = [
   "Soft Glam — R440",
   "Full Glam — R520",
-  "Wedding Glam — Bride: R550 | Bridesmaids: R400",
+  "Wedding Glam — Bride: R850 | Bridesmaids: R650",
   "Trial Makeup — R350",
   "Strip Mink Lashes — R150",
-  "Matric Dance — R400",
-  "Official Photo Glam — R390",
-  "Birthday Glam — R450",
+  "Matric Dance — R500",
+  "Official Photo Glam — R450",
+  "Birthday Glam — R470",
 ];
 
 const BookingForm = () => {
