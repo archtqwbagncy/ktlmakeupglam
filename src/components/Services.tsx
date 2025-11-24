@@ -25,7 +25,7 @@ const services = [
   },
   {
     name: "Wedding Glam",
-    price: "Bride: R550 | Bridesmaids: R400",
+    price: "Bride: R850 | Bridesmaids: R650",
     description:
       "Flawless bridal looks designed to last through your special day, plus elegant coordinated makeup for your bridal party.",
     image: weddingGlamImage,
@@ -46,21 +46,21 @@ const services = [
   },
   {
     name: "Matric Dance",
-    price: "R400",
+    price: "R500",
     description:
       "Stand out at your matric farewell with a glamorous, age-appropriate look.",
     image: matricDanceImage,
   },
   {
     name: "Official Photo Glam",
-    price: "R390",
+    price: "R450",
     description:
       "Camera-ready makeup for graduations, photoshoots, and corporate images.",
     image: officialPhotoGlamImage,
   },
   {
     name: "Birthday Glam",
-    price: "R450",
+    price: "R470",
     description: "Celebrate in style with a makeup look tailored for your big day.",
     image: birthdayGlamImage,
   },
