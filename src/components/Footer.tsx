@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "@/assets/ktl-logo.png";
+import logo from "@/assets/ktl-web-logo.png";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {

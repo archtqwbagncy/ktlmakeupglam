@@ -7,8 +7,53 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  /* Light Mode (Default) - Elegant & Clean */
   :root {
-    /* Dark & Gold Color Palette - Based on Logo */
+    --background: 30 20% 98%;
+    --foreground: 30 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 15% 93%;
+    --secondary-foreground: 30 10% 20%;
+
+    --muted: 30 10% 90%;
+    --muted-foreground: 30 5% 45%;
+
+    --accent: 43 74% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 93%;
+    --ring: 43 74% 49%;
+
+    --radius: 0.75rem;
+
+    /* Light mode gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 74% 59%) 100%);
+    --gradient-light: linear-gradient(135deg, hsl(30 20% 98%) 0%, hsl(30 15% 95%) 100%);
+    --gradient-overlay: linear-gradient(90deg, hsl(0 0% 100% / 0.95) 0%, hsl(0 0% 100% / 0.7) 100%);
+
+    /* Light shadows */
+    --shadow-gold: 0 10px 40px -10px hsl(43 74% 49% / 0.25);
+    --shadow-elegant: 0 20px 60px -15px hsl(30 10% 30% / 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark Mode - Original Gold & Black */
+  .dark {
     --background: 0 0% 8%;
     --foreground: 0 0% 95%;
 
@@ -37,19 +82,14 @@ All colors MUST be HSL.
     --input: 0 0% 18%;
     --ring: 43 74% 52%;
 
-    --radius: 0.75rem;
-
     /* Dark gradients */
     --gradient-gold: linear-gradient(135deg, hsl(43 74% 52%) 0%, hsl(43 74% 62%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
-    --gradient-dark-overlay: linear-gradient(90deg, hsl(0 0% 8% / 0.95) 0%, hsl(0 0% 8% / 0.7) 100%);
+    --gradient-light: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
+    --gradient-overlay: linear-gradient(90deg, hsl(0 0% 8% / 0.95) 0%, hsl(0 0% 8% / 0.7) 100%);
 
     /* Dark shadows */
     --shadow-gold: 0 10px 40px -10px hsl(43 74% 52% / 0.4);
     --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.6);
-
-    /* Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -59,7 +99,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
   }
 
   html {

@@ -1,129 +1,36 @@
-import { useState, useEffect, useRef } from "react";
-import { Menu, X } from "lucide-react";
-import logo from "@/assets/ktl-logo.png";
+import { Home, Sparkles, LayoutGrid, User, Calendar } from "lucide-react";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    
-    // Trigger animation on mount
-    setTimeout(() => setIsVisible(true), 100);
-    
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
-  const navLinks = [
-    { id: "home", label: "Home" },
-    { id: "why-choose-us", label: "Why Choose Us" },
-    { id: "services", label: "Services" },
-    { id: "about", label: "About" },
-    { id: "booking", label: "Booking" },
+  const navItems = [
+    {
+      name: "Home",
+      link: "home",
+      icon: <Home className="h-4 w-4" />,
+    },
+    {
+      name: "Why Choose Us",
+      link: "why-choose-us",
+      icon: <Sparkles className="h-4 w-4" />,
+    },
+    {
+      name: "Services",
+      link: "services",
+      icon: <LayoutGrid className="h-4 w-4" />,
+    },
+    {
+      name: "About",
+      link: "about",
+      icon: <User className="h-4 w-4" />,
+    },
+    {
+      name: "Booking",
+      link: "booking",
+      icon: <Calendar className="h-4 w-4" />,
+    },
   ];
 
-  return (
-    <nav
-      ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-elegant"
-          : "bg-transparent"
-      } ${isVisible ? "animate-fade-in" : "opacity-0"}`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <button
-            onClick={() => scrollToSection("home")}
-            className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105"
-          >
-            <img src={logo} alt="KTL Makeup Glam" className="h-12 w-auto" />
-            <span className="text-xl font-bold text-foreground hidden sm:block">
-              KTL Makeup Glam
-            </span>
-          </button>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium relative group"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            ))}
-            <a
-              href="tel:+27647081562"
-              className="text-primary hover:text-primary/80 transition-colors duration-300 font-bold flex items-center gap-2 border border-primary px-4 py-2 rounded-lg hover:bg-primary/10"
-            >
-              <span>064 708 1562</span>
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
-            ) : (
-              <Menu className="h-6 w-6 text-foreground" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-card/95 backdrop-blur-md rounded-lg mt-2 shadow-elegant animate-fade-in">
-            <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium px-4 py-2 text-left hover:bg-secondary rounded-lg"
-                >
-                  {link.label}
-                </button>
-              ))}
-              <a
-                href="tel:+27647081562"
-                className="text-primary hover:text-primary/80 transition-colors duration-300 font-bold px-4 py-2 text-left border border-primary rounded-lg hover:bg-primary/10 mx-4"
-              >
-                064 708 1562
-              </a>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
+  return <FloatingNav navItems={navItems} />;
 };
 
 export default Navbar;
