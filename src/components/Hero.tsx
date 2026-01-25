@@ -56,11 +56,11 @@ const Hero = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative animate-slide-in-right">
+          <div className="relative animate-slide-in-right flex items-center">
             <img
               src={heroImage}
               alt="Professional makeup artist applying makeup"
-              className="w-full h-auto rounded-2xl shadow-elegant"
+              className="w-full max-w-md lg:max-w-lg h-auto rounded-2xl shadow-elegant mx-auto"
             />
           </div>
         </div>
