@@ -1,11 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
@@ -22,26 +17,8 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
-  const { scrollYProgress } = useScroll();
-  const [visible, setVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    if (typeof current === "number") {
-      const direction = current - (scrollYProgress.getPrevious() ?? 0);
-
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(true);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
-    }
-  });
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -64,84 +41,74 @@ export const FloatingNav = ({
 
   return (
     <>
-      <AnimatePresence mode="wait">
-        <motion.div
-          initial={{
-            opacity: 1,
-            y: -100,
-          }}
-          animate={{
-            y: visible ? 0 : -100,
-            opacity: visible ? 1 : 0,
-          }}
-          transition={{
-            duration: 0.2,
-          }}
-          className={cn(
-            "flex max-w-fit fixed top-6 inset-x-0 mx-auto border border-border dark:border-border/50 rounded-full bg-card/95 dark:bg-card/95 backdrop-blur-md shadow-elegant z-[5000] pr-3 pl-4 py-2 items-center justify-center space-x-1 sm:space-x-4",
-            className
-          )}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className={cn(
+          "flex max-w-fit fixed top-6 inset-x-0 mx-auto border border-border dark:border-border/50 rounded-full bg-card/95 dark:bg-card/95 backdrop-blur-md shadow-elegant z-[5000] pr-3 pl-4 py-2 items-center justify-center space-x-1 sm:space-x-4",
+          className
+        )}
+      >
+        {/* Logo */}
+        <button
+          onClick={() => scrollToSection("home")}
+          className="flex items-center transition-transform duration-300 hover:scale-105 pr-2"
         >
-          {/* Logo */}
+          <img src={logo} alt="KTL Makeup Glam" className="h-10 w-auto" />
+        </button>
+
+        {/* Desktop Nav Items */}
+        <div className="hidden md:flex items-center space-x-1">
+          {navItems.map((navItem, idx) => (
+            <button
+              key={`link-${idx}`}
+              onClick={() => scrollToSection(navItem.link)}
+              className={cn(
+                "relative text-foreground/80 items-center flex space-x-1 hover:text-primary transition-colors px-3 py-2 rounded-full text-sm font-medium"
+              )}
+            >
+              <span className="block sm:hidden">{navItem.icon}</span>
+              <span className="hidden sm:block">{navItem.name}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* Theme Toggle & CTA */}
+        <div className="flex items-center space-x-2">
           <button
-            onClick={() => scrollToSection("home")}
-            className="flex items-center transition-transform duration-300 hover:scale-105 pr-2"
+            onClick={toggleTheme}
+            className="p-2 rounded-full hover:bg-secondary transition-colors"
+            aria-label="Toggle theme"
           >
-            <img src={logo} alt="KTL Makeup Glam" className="h-10 w-auto" />
+            {theme === "dark" ? (
+              <Sun className="h-4 w-4 text-foreground" />
+            ) : (
+              <Moon className="h-4 w-4 text-foreground" />
+            )}
           </button>
 
-          {/* Desktop Nav Items */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((navItem, idx) => (
-              <button
-                key={`link-${idx}`}
-                onClick={() => scrollToSection(navItem.link)}
-                className={cn(
-                  "relative text-foreground/80 items-center flex space-x-1 hover:text-primary transition-colors px-3 py-2 rounded-full text-sm font-medium"
-                )}
-              >
-                <span className="block sm:hidden">{navItem.icon}</span>
-                <span className="hidden sm:block">{navItem.name}</span>
-              </button>
-            ))}
-          </div>
+          <a
+            href="tel:+27647081562"
+            className="hidden sm:flex border text-sm font-medium relative border-primary/30 dark:border-primary/50 text-foreground px-4 py-2 rounded-full hover:bg-primary/10 transition-colors"
+          >
+            <span>064 708 1562</span>
+            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-primary to-transparent h-px" />
+          </a>
 
-          {/* Theme Toggle & CTA */}
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-secondary transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Sun className="h-4 w-4 text-foreground" />
-              ) : (
-                <Moon className="h-4 w-4 text-foreground" />
-              )}
-            </button>
-
-            <a
-              href="tel:+27647081562"
-              className="hidden sm:flex border text-sm font-medium relative border-primary/30 dark:border-primary/50 text-foreground px-4 py-2 rounded-full hover:bg-primary/10 transition-colors"
-            >
-              <span>064 708 1562</span>
-              <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-primary to-transparent h-px" />
-            </a>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-full hover:bg-secondary transition-colors"
-            >
-              {mobileMenuOpen ? (
-                <X className="h-5 w-5 text-foreground" />
-              ) : (
-                <Menu className="h-5 w-5 text-foreground" />
-              )}
-            </button>
-          </div>
-        </motion.div>
-      </AnimatePresence>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-full hover:bg-secondary transition-colors"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-5 w-5 text-foreground" />
+            ) : (
+              <Menu className="h-5 w-5 text-foreground" />
+            )}
+          </button>
+        </div>
+      </motion.div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
