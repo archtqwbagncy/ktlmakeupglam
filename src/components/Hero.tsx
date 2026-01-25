@@ -60,7 +60,7 @@ const Hero = () => {
             <img
               src={heroImage}
               alt="Professional makeup artist applying makeup"
-              className="w-full max-w-md lg:max-w-lg h-auto rounded-2xl shadow-elegant mx-auto"
+              className="w-full max-w-xs lg:max-w-sm h-auto rounded-2xl shadow-elegant mx-auto"
             />
           </div>
         </div>
