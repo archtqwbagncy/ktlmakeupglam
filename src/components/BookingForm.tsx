@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 
 const services = [
   "Soft Glam — R440",
@@ -35,6 +36,7 @@ const BookingForm = () => {
     dateTime: "",
     notes: "",
     travelService: false,
+    agreeToTerms: false,
   });
 
   useEffect(() => {
@@ -64,6 +66,11 @@ const BookingForm = () => {
     // Basic validation
     if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.dateTime) {
       toast.error("Please fill in all required fields");
+      return;
+    }
+
+    if (!formData.agreeToTerms) {
+      toast.error("Please agree to the Terms & Conditions before booking");
       return;
     }
 
@@ -105,6 +112,7 @@ const BookingForm = () => {
       dateTime: "",
       notes: "",
       travelService: false,
+      agreeToTerms: false,
     });
   };
 
@@ -262,6 +270,31 @@ const BookingForm = () => {
                   className="text-foreground font-medium cursor-pointer leading-relaxed"
                 >
                   I want KTL Makeup Glam to come to me (travel fee applies)
+                </Label>
+              </div>
+
+              <div className="flex items-start space-x-3 p-4 bg-secondary/50 rounded-lg">
+                <Checkbox
+                  id="terms"
+                  checked={formData.agreeToTerms}
+                  onCheckedChange={(checked) =>
+                    setFormData({ ...formData, agreeToTerms: checked as boolean })
+                  }
+                  className="mt-1"
+                />
+                <Label
+                  htmlFor="terms"
+                  className="text-foreground font-medium cursor-pointer leading-relaxed"
+                >
+                  I agree to the{" "}
+                  <Link
+                    to="/terms-and-conditions"
+                    target="_blank"
+                    className="text-primary underline hover:text-primary/80 transition-colors"
+                  >
+                    Terms & Conditions
+                  </Link>
+                  , including the 40% non-refundable deposit policy *
                 </Label>
               </div>
 

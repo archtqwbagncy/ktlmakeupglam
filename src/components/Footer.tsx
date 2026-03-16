@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import logo from "@/assets/ktl-web-logo.png";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -111,6 +112,12 @@ const Footer = () => {
               >
                 Booking
               </a>
+              <Link
+                to="/terms-and-conditions"
+                className="block text-muted-foreground hover:text-primary transition-colors"
+              >
+                Terms & Conditions
+              </Link>
             </div>
           </div>
         </div>
