@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import logo from "@/assets/ktl-web-logo.png";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
