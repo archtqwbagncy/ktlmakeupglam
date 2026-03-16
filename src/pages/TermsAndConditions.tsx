@@ -32,7 +32,7 @@ const TermsAndConditions = () => {
                   Your booking is only confirmed once the deposit has been received.
                 </li>
                 <li>
-                  The remaining balance is due on the day of your appointment, prior to the service commencing.
+                  The remaining balance is due <strong className="text-foreground">after the service</strong> has been completed.
                 </li>
               </ul>
             </div>
