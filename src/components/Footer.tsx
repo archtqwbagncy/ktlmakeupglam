@@ -112,6 +112,12 @@ const Footer = () => {
               >
                 Booking
               </a>
+              <Link
+                to="/terms-and-conditions"
+                className="block text-muted-foreground hover:text-primary transition-colors"
+              >
+                Terms & Conditions
+              </Link>
             </div>
           </div>
         </div>

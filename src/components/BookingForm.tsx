@@ -273,6 +273,31 @@ const BookingForm = () => {
                 </Label>
               </div>
 
+              <div className="flex items-start space-x-3 p-4 bg-secondary/50 rounded-lg">
+                <Checkbox
+                  id="terms"
+                  checked={formData.agreeToTerms}
+                  onCheckedChange={(checked) =>
+                    setFormData({ ...formData, agreeToTerms: checked as boolean })
+                  }
+                  className="mt-1"
+                />
+                <Label
+                  htmlFor="terms"
+                  className="text-foreground font-medium cursor-pointer leading-relaxed"
+                >
+                  I agree to the{" "}
+                  <Link
+                    to="/terms-and-conditions"
+                    target="_blank"
+                    className="text-primary underline hover:text-primary/80 transition-colors"
+                  >
+                    Terms & Conditions
+                  </Link>
+                  , including the 40% non-refundable deposit policy *
+                </Label>
+              </div>
+
               <Button
                 type="submit"
                 variant="hero"
