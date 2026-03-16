@@ -310,9 +310,20 @@ const BookingForm = () => {
                 </span>
               </Button>
 
-              <p className="text-sm text-muted-foreground text-center">
-                We'll get back to you within 24 hours to confirm your appointment.
-              </p>
+              <div className="text-sm text-muted-foreground text-center space-y-1">
+                <p>We'll get back to you within 24 hours to confirm your appointment.</p>
+                <p>
+                  A <strong className="text-foreground">40% non-refundable deposit</strong> is required to secure your booking. Date changes are allowed with 48-hour notice. See our{" "}
+                  <Link
+                    to="/terms-and-conditions"
+                    target="_blank"
+                    className="text-primary underline hover:text-primary/80 transition-colors"
+                  >
+                    Terms & Conditions
+                  </Link>{" "}
+                  for full details.
+                </p>
+              </div>
             </form>
           </div>
         </div>
