@@ -112,6 +112,7 @@ const BookingForm = () => {
       dateTime: "",
       notes: "",
       travelService: false,
+      agreeToTerms: false,
     });
   };
 
