@@ -69,6 +69,11 @@ const BookingForm = () => {
       return;
     }
 
+    if (!formData.agreeToTerms) {
+      toast.error("Please agree to the Terms & Conditions before booking");
+      return;
+    }
+
     // Format the booking details for WhatsApp
     const date = new Date(formData.dateTime);
     const formattedDate = date.toLocaleDateString('en-ZA', { 
