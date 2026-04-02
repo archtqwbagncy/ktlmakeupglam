@@ -46,9 +46,10 @@ export const FloatingNav = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
         className={cn(
-          "flex max-w-fit fixed top-6 inset-x-0 mx-auto border border-border dark:border-border/50 rounded-full bg-card/95 dark:bg-card/95 backdrop-blur-md shadow-elegant z-[5000] pr-3 pl-4 py-2 items-center justify-center space-x-1 sm:space-x-4",
+          "flex max-w-fit fixed inset-x-0 mx-auto border border-border dark:border-border/50 rounded-full bg-card/95 dark:bg-card/95 backdrop-blur-md shadow-elegant z-[5000] pr-3 pl-4 py-2 items-center justify-center space-x-1 sm:space-x-4 transition-all duration-300",
           className
         )}
+        style={{ top: "calc(1.5rem + var(--banner-height, 0px))" }}
       >
         {/* Logo */}
         <button
@@ -118,7 +119,8 @@ export const FloatingNav = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-24 inset-x-4 mx-auto bg-card/95 backdrop-blur-md border border-border rounded-2xl shadow-elegant z-[4999] p-4 md:hidden"
+            className="fixed inset-x-4 mx-auto bg-card/95 backdrop-blur-md border border-border rounded-2xl shadow-elegant z-[4999] p-4 md:hidden transition-all duration-300"
+            style={{ top: "calc(6rem + var(--banner-height, 0px))" }}
           >
             <div className="flex flex-col space-y-2">
               {navItems.map((navItem, idx) => (
