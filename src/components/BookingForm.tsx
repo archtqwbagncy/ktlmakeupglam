@@ -214,6 +214,7 @@ const BookingForm = () => {
                     onValueChange={(value) =>
                       setFormData({ ...formData, service: value })
                     }
+                    modal={false}
                   >
                     <SelectTrigger className="mt-2 border-border focus:border-primary bg-background">
                       <SelectValue placeholder="Select a service" />
