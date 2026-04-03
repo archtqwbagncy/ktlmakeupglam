@@ -45,10 +45,10 @@ const services = [
     image: stripMinkLashesImage,
   },
   {
-    name: "Matric Dance",
+    name: "Graduation & Matric Dance",
     price: "R500",
     description:
-      "Stand out at your matric farewell with a glamorous, age-appropriate look.",
+      "Stand out at your graduation ceremony or matric farewell with a glamorous, camera-ready look.",
     image: matricDanceImage,
   },
   {

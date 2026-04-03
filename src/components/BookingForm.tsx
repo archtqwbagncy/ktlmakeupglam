@@ -24,7 +24,7 @@ const services = [
   "Wedding Glam — Bride: R850 | Bridesmaids: R650",
   "Trial Makeup — R350",
   "Strip Mink Lashes — R150",
-  "Matric Dance — R500",
+  "Graduation & Matric Dance — R500",
   "Official Photo Glam — R450",
   "Birthday Glam — R470",
 ];
