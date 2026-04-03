@@ -41,6 +41,7 @@ const Specials = () => {
             <Button 
               variant="hero" 
               size="xl" 
+              className="w-full sm:w-auto h-auto min-h-[3.5rem] px-6 py-4 whitespace-normal text-base md:text-lg"
               onClick={() => {
                 const element = document.getElementById('booking');
                 if (element) {

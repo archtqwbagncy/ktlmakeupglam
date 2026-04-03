@@ -45,7 +45,7 @@ const Hero = () => {
                 variant="hero"
                 size="xl"
                 onClick={scrollToBooking}
-                className="group"
+                className="group w-full sm:w-auto"
               >
                 Book An Appointment
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">
