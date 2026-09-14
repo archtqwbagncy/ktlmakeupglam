@@ -101,7 +101,7 @@ const Gallery = () => {
             Our <span className="text-gradient-gold">Gallery</span>
           </h2>
           <div className="mb-2 h-px flex-1 bg-border" />
-          <span className="mb-1 hidden font-sans text-sm text-muted-foreground sm:block">01 — 10</span>
+          <span className="mb-1 hidden font-sans text-sm text-muted-foreground sm:block">01 — 14</span>
         </div>
 
         <div className="grid auto-rows-[17rem] grid-cols-2 gap-2 md:auto-rows-[15rem] md:grid-cols-12 md:gap-3">
