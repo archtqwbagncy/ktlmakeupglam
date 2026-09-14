@@ -12,6 +12,10 @@ import gallerySeven from "@/assets/gallery/photo_2026-09-14_20-27-45.jpg.asset.j
 import galleryEight from "@/assets/gallery/photo_2026-09-14_20-27-43.jpg.asset.json";
 import galleryNine from "@/assets/gallery/photo_2026-09-14_20-27-42.jpg.asset.json";
 import galleryTen from "@/assets/gallery/photo_2026-09-14_20-27-41.jpg.asset.json";
+import galleryEleven from "@/assets/gallery/photo_2026-09-14_20-27-40.jpg.asset.json";
+import galleryTwelve from "@/assets/gallery/photo_2026-09-14_20-27-38.jpg.asset.json";
+import galleryThirteen from "@/assets/gallery/photo_2026-09-14_20-27-37.jpg.asset.json";
+import galleryFourteen from "@/assets/gallery/photo_2026-09-14_20-27-30.jpg.asset.json";
 
 const galleryImages = [
   galleryFour.url,
@@ -24,6 +28,10 @@ const galleryImages = [
   galleryNine.url,
   gallerySeven.url,
   gallerySix.url,
+  galleryEleven.url,
+  galleryTwelve.url,
+  galleryThirteen.url,
+  galleryFourteen.url,
 ];
 
 const tileClasses = [
@@ -37,6 +45,10 @@ const tileClasses = [
   "md:col-span-3",
   "md:col-span-5",
   "md:col-span-4",
+  "md:col-span-5",
+  "md:col-span-3",
+  "md:col-span-7 md:row-span-2",
+  "md:col-span-5",
 ];
 
 const Gallery = () => {
@@ -89,7 +101,7 @@ const Gallery = () => {
             Our <span className="text-gradient-gold">Gallery</span>
           </h2>
           <div className="mb-2 h-px flex-1 bg-border" />
-          <span className="mb-1 hidden font-sans text-sm text-muted-foreground sm:block">01 — 10</span>
+          <span className="mb-1 hidden font-sans text-sm text-muted-foreground sm:block">01 — 14</span>
         </div>
 
         <div className="grid auto-rows-[17rem] grid-cols-2 gap-2 md:auto-rows-[15rem] md:grid-cols-12 md:gap-3">
@@ -102,7 +114,7 @@ const Gallery = () => {
               transition={{ duration: 0.55, delay: index * 0.06, ease: "easeOut" }}
               onClick={() => setSelectedIndex(index)}
               className={`group relative overflow-hidden bg-muted text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${tileClasses[index]} ${
-                index === 0 || index === 4 || index === 8 ? "col-span-2" : "col-span-1"
+                index === 0 || index === 4 || index === 8 || index === 12 ? "col-span-2" : "col-span-1"
               }`}
               aria-label={`Open gallery image ${index + 1}`}
             >
