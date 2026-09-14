@@ -12,6 +12,10 @@ import gallerySeven from "@/assets/gallery/photo_2026-09-14_20-27-45.jpg.asset.j
 import galleryEight from "@/assets/gallery/photo_2026-09-14_20-27-43.jpg.asset.json";
 import galleryNine from "@/assets/gallery/photo_2026-09-14_20-27-42.jpg.asset.json";
 import galleryTen from "@/assets/gallery/photo_2026-09-14_20-27-41.jpg.asset.json";
+import galleryEleven from "@/assets/gallery/photo_2026-09-14_20-27-40.jpg.asset.json";
+import galleryTwelve from "@/assets/gallery/photo_2026-09-14_20-27-38.jpg.asset.json";
+import galleryThirteen from "@/assets/gallery/photo_2026-09-14_20-27-37.jpg.asset.json";
+import galleryFourteen from "@/assets/gallery/photo_2026-09-14_20-27-30.jpg.asset.json";
 
 const galleryImages = [
   galleryFour.url,
@@ -24,6 +28,10 @@ const galleryImages = [
   galleryNine.url,
   gallerySeven.url,
   gallerySix.url,
+  galleryEleven.url,
+  galleryTwelve.url,
+  galleryThirteen.url,
+  galleryFourteen.url,
 ];
 
 const tileClasses = [
@@ -37,6 +45,10 @@ const tileClasses = [
   "md:col-span-3",
   "md:col-span-5",
   "md:col-span-4",
+  "md:col-span-5",
+  "md:col-span-3",
+  "md:col-span-7 md:row-span-2",
+  "md:col-span-5",
 ];
 
 const Gallery = () => {
