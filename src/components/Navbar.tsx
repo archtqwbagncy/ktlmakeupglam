@@ -1,4 +1,4 @@
-import { Home, Sparkles, LayoutGrid, User, Calendar } from "lucide-react";
+import { Home, Sparkles, LayoutGrid, Images, User, Calendar } from "lucide-react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 
 const Navbar = () => {
@@ -17,6 +17,11 @@ const Navbar = () => {
       name: "Services",
       link: "services",
       icon: <LayoutGrid className="h-4 w-4" />,
+    },
+    {
+      name: "Gallery",
+      link: "gallery",
+      icon: <Images className="h-4 w-4" />,
     },
     {
       name: "About",
