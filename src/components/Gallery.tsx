@@ -114,7 +114,7 @@ const Gallery = () => {
               transition={{ duration: 0.55, delay: index * 0.06, ease: "easeOut" }}
               onClick={() => setSelectedIndex(index)}
               className={`group relative overflow-hidden bg-muted text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${tileClasses[index]} ${
-                index === 0 || index === 4 || index === 8 ? "col-span-2" : "col-span-1"
+                index === 0 || index === 4 || index === 8 || index === 12 ? "col-span-2" : "col-span-1"
               }`}
               aria-label={`Open gallery image ${index + 1}`}
             >
