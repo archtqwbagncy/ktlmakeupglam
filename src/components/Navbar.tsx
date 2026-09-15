@@ -24,6 +24,11 @@ const Navbar = () => {
       icon: <Images className="h-4 w-4" />,
     },
     {
+      name: "Reviews",
+      link: "testimonials",
+      icon: <Star className="h-4 w-4" />,
+    },
+    {
       name: "About",
       link: "about",
       icon: <User className="h-4 w-4" />,

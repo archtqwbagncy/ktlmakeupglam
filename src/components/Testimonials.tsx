@@ -90,7 +90,11 @@ const Testimonials = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
             What Our Clients Say
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-4"></div>
+          <p className="text-muted-foreground flex items-center justify-center gap-1.5">
+            All 5-star reviews from
+            <span className="font-semibold text-foreground">Google</span>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
