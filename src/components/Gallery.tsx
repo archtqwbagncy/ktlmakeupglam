@@ -2,36 +2,36 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import galleryOne from "@/assets/gallery/photo_2026-09-14_20-28-08.jpg.asset.json";
-import galleryTwo from "@/assets/gallery/photo_2026-09-14_20-28-01.jpg.asset.json";
-import galleryThree from "@/assets/gallery/photo_2026-09-14_20-27-50.jpg.asset.json";
-import galleryFour from "@/assets/gallery/photo_2026-09-14_20-27-49.jpg.asset.json";
-import galleryFive from "@/assets/gallery/photo_2026-09-14_20-27-48.jpg.asset.json";
-import gallerySix from "@/assets/gallery/photo_2026-09-14_20-27-47.jpg.asset.json";
-import gallerySeven from "@/assets/gallery/photo_2026-09-14_20-27-45.jpg.asset.json";
-import galleryEight from "@/assets/gallery/photo_2026-09-14_20-27-43.jpg.asset.json";
-import galleryNine from "@/assets/gallery/photo_2026-09-14_20-27-42.jpg.asset.json";
-import galleryTen from "@/assets/gallery/photo_2026-09-14_20-27-41.jpg.asset.json";
-import galleryEleven from "@/assets/gallery/photo_2026-09-14_20-27-40.jpg.asset.json";
-import galleryTwelve from "@/assets/gallery/photo_2026-09-14_20-27-38.jpg.asset.json";
-import galleryThirteen from "@/assets/gallery/photo_2026-09-14_20-27-37.jpg.asset.json";
-import galleryFourteen from "@/assets/gallery/photo_2026-09-14_20-27-30.jpg.asset.json";
+import galleryOne from "@/assets/gallery/photo_2026-09-14_20-28-08.jpg";
+import galleryTwo from "@/assets/gallery/photo_2026-09-14_20-28-01.jpg";
+import galleryThree from "@/assets/gallery/photo_2026-09-14_20-27-50.jpg";
+import galleryFour from "@/assets/gallery/photo_2026-09-14_20-27-49.jpg";
+import galleryFive from "@/assets/gallery/photo_2026-09-14_20-27-48.jpg";
+import gallerySix from "@/assets/gallery/photo_2026-09-14_20-27-47.jpg";
+import gallerySeven from "@/assets/gallery/photo_2026-09-14_20-27-45.jpg";
+import galleryEight from "@/assets/gallery/photo_2026-09-14_20-27-43.jpg";
+import galleryNine from "@/assets/gallery/photo_2026-09-14_20-27-42.jpg";
+import galleryTen from "@/assets/gallery/photo_2026-09-14_20-27-41.jpg";
+import galleryEleven from "@/assets/gallery/photo_2026-09-14_20-27-40.jpg";
+import galleryTwelve from "@/assets/gallery/photo_2026-09-14_20-27-38.jpg";
+import galleryThirteen from "@/assets/gallery/photo_2026-09-14_20-27-37.jpg";
+import galleryFourteen from "@/assets/gallery/photo_2026-09-14_20-27-30.jpg";
 
 const galleryImages = [
-  galleryFour.url,
-  galleryEight.url,
-  galleryFive.url,
-  galleryOne.url,
-  galleryThree.url,
-  galleryTen.url,
-  galleryTwo.url,
-  galleryNine.url,
-  gallerySeven.url,
-  gallerySix.url,
-  galleryEleven.url,
-  galleryTwelve.url,
-  galleryThirteen.url,
-  galleryFourteen.url,
+  galleryFour,
+  galleryEight,
+  galleryFive,
+  galleryOne,
+  galleryThree,
+  galleryTen,
+  galleryTwo,
+  galleryNine,
+  gallerySeven,
+  gallerySix,
+  galleryEleven,
+  galleryTwelve,
+  galleryThirteen,
+  galleryFourteen,
 ];
 
 const tileClasses = [
