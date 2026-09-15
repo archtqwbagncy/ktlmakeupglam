@@ -29,18 +29,48 @@ const Testimonials = () => {
 
   const testimonials = [
     {
+      name: "Letlhogonolo Radise",
+      review: "Exceptional work! 💋🌺, not just make up, but ART. So clean, flawless and long lasting. She listened exactly what I wanted and delivered beyond. If you want to look like a queen book her. 100/10🙌",
+      rating: 5,
+    },
+    {
+      name: "Angelique Durand",
+      review: "Hazel is a superb makeup artist! I needed someone to do my makeup for my son's wedding and I didn't know of anyone.",
+      rating: 5,
+    },
+    {
+      name: "Nonkululeko Dineka",
+      review: "Hazel was so welcoming and friendly. She treated us like her friends, we talked and laughed, but very professional.",
+      rating: 5,
+    },
+    {
+      name: "Mashadi Mabena",
+      review: "Thank you for being an incredible make up artist and absolutely I love how you made my face looks so much different ❤️👌",
+      rating: 5,
+    },
+    {
+      name: "Clio Rasebeka",
+      review: "The service was best and very professional",
+      rating: 5,
+    },
+    {
+      name: "Jamira Maria Kara",
+      review: "Was excellent job",
+      rating: 5,
+    },
+    {
+      name: "Thuliswa Mbangula",
+      review: "She knows what shes doing... You will never be sorry 🩷🩷🩷🌟🌟🌟🌟🌟",
+      rating: 5,
+    },
+    {
+      name: "Rose Mahlophe",
+      review: "Very professional make up artist, I was very impressed with the outcome. I would highly recommend KTL Makeup Glam to anyone who wants a natural, elegant look.",
+      rating: 5,
+    },
+    {
       name: "LNM_CAPTIONS PHOTOGRAPHY",
       review: "Very Professional Make Up Artist, Such bubbly personality easy to work with.",
-      rating: 5,
-    },
-    {
-      name: "Thandi M.",
-      review: "Absolutely loved my makeup! She really listened to what I wanted and made me feel so beautiful for my wedding day. Highly recommend!",
-      rating: 5,
-    },
-    {
-      name: "Sarah K.",
-      review: "Amazing service! Professional, friendly and my makeup lasted the entire day. Will definitely be booking again for future events.",
       rating: 5,
     },
   ];
@@ -60,7 +90,11 @@ const Testimonials = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
             What Our Clients Say
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-4"></div>
+          <p className="text-muted-foreground flex items-center justify-center gap-1.5">
+            All 5-star reviews from
+            <span className="font-semibold text-foreground">Google</span>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
