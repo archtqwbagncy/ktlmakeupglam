@@ -1,4 +1,4 @@
-import { Home, Sparkles, LayoutGrid, Images, User, Calendar } from "lucide-react";
+import { Home, Sparkles, LayoutGrid, Images, Star, User, Calendar } from "lucide-react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 
 const Navbar = () => {
