@@ -25,7 +25,7 @@ const services = [
   },
   {
     name: "Wedding Glam",
-    price: "Bride: R850 | Bridesmaids: R650",
+    price: "Bride: R1200 | Bridesmaids: R780 | Flower Girls: R320",
     description:
       "Flawless bridal looks designed to last through your special day, plus elegant coordinated makeup for your bridal party.",
     image: weddingGlamImage,

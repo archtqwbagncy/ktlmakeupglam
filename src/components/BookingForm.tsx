@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 const services = [
   "Soft Glam — R440",
   "Full Glam — R520",
-  "Wedding Glam — Bride: R850 | Bridesmaids: R650",
+  "Wedding Glam — Bride: R1200 | Bridesmaids: R780 | Flower Girls: R320",
   "Trial Makeup — R350",
   "Strip Mink Lashes — R150",
   "Graduation & Matric Dance — R500",
