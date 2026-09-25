@@ -25,14 +25,9 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="animate-fade-in">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-              The Wait Is Finally{" "}
-              <span className="text-gradient-gold">Over!</span>
-            </h1>
-            
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
               JHB South and Alberton, Your makeup artist is here.
-            </h2>
+            </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground mb-10 leading-relaxed">
               Welcome to KTL Makeup Glam! We believe in bringing out the beauty in
