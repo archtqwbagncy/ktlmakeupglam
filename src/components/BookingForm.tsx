@@ -23,8 +23,8 @@ const services = [
   "Cluster Lashes — R200",
   "Graduation & Matric Dance — R550",
   "MATRIC DANCE/GRADUATION + HAIR INSTALLATION — Contact for Quote",
-  "Official Photo Glam — R450",
-  "Birthday Glam — R470",
+  "Official Photo Glam — R520",
+  "Birthday Glam — R520",
 ];
 
 const BookingForm = () => {

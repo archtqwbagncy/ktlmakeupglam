@@ -69,14 +69,14 @@ const services = [
   },
   {
     name: "Official Photo Glam",
-    price: "R450",
+    price: "R520",
     description:
       "Camera-ready makeup for graduations, photoshoots, and corporate images.",
     image: officialPhotoGlamImage,
   },
   {
     name: "Birthday Glam",
-    price: "R470",
+    price: "R520",
     description: "Celebrate in style with a makeup look tailored for your big day.",
     image: birthdayGlamImage,
   },
