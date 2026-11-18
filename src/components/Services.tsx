@@ -8,18 +8,20 @@ import officialPhotoGlamImage from "@/assets/official-photo-glam.png";
 import trialMakeupImage from "@/assets/trial-makeup.png";
 import stripMinkLashesImage from "@/assets/strip-mink-lashes.png";
 import birthdayGlamImage from "@/assets/birthday-glam.png";
+import clusterLashesImage from "@/assets/gallery/photo_2026-09-14_20-27-43.jpg";
+import hairInstallationImage from "@/assets/gallery/photo_2026-09-14_20-27-41.jpg";
 
 const services = [
   {
     name: "Soft Glam",
-    price: "R440",
+    price: "R480",
     description:
       "A natural look with a touch of elegance, perfect for day-to-day wear or casual events.",
     image: softGlamImage,
   },
   {
     name: "Full Glam",
-    price: "R520",
+    price: "R560",
     description: "A bold, polished look for special occasions and nights out.",
     image: fullGlamImage,
   },
@@ -45,11 +47,25 @@ const services = [
     image: stripMinkLashesImage,
   },
   {
+    name: "Cluster Lashes",
+    price: "R200",
+    description:
+      "Lightweight cluster lashes customized to enhance your eye shape with beautiful volume and definition.",
+    image: clusterLashesImage,
+  },
+  {
     name: "Graduation & Matric Dance",
-    price: "R500",
+    price: "R550",
     description:
       "Stand out at your graduation ceremony or matric farewell with a glamorous, camera-ready look.",
     image: matricDanceImage,
+  },
+  {
+    name: "MATRIC DANCE/GRADUATION + HAIR INSTALLATION",
+    price: "Contact for Quote",
+    description:
+      "Complete all-in-one glam transformation combining camera-ready matric or graduation makeup with professional hair installation.",
+    image: hairInstallationImage,
   },
   {
     name: "Official Photo Glam",

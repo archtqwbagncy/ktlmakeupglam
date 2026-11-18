@@ -15,12 +15,14 @@ import { toast } from "sonner";
 import { Link } from "react-router-dom";
 
 const services = [
-  "Soft Glam — R440",
-  "Full Glam — R520",
+  "Soft Glam — R480",
+  "Full Glam — R560",
   "Wedding Glam — Bride: R1200 | Bridesmaids: R780 | Flower Girls: R320",
   "Trial Makeup — R350",
   "Strip Mink Lashes — R150",
-  "Graduation & Matric Dance — R500",
+  "Cluster Lashes — R200",
+  "Graduation & Matric Dance — R550",
+  "MATRIC DANCE/GRADUATION + HAIR INSTALLATION — Contact for Quote",
   "Official Photo Glam — R450",
   "Birthday Glam — R470",
 ];
