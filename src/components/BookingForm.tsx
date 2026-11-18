@@ -66,7 +66,7 @@ const BookingForm = () => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.dateTime) {
+    if (!formData.name || !formData.phone || !formData.service || !formData.dateTime) {
       toast.error("Please fill in all required fields");
       return;
     }
@@ -91,7 +91,7 @@ const BookingForm = () => {
 
     const message = `*New Booking Request*%0A%0A` +
       `*Name:* ${formData.name}%0A` +
-      `*Email:* ${formData.email}%0A` +
+      (formData.email ? `*Email:* ${formData.email}%0A` : '') +
       `*Phone:* ${formData.phone}%0A` +
       `*Service:* ${formData.service}%0A` +
       `*Date:* ${formattedDate}%0A` +
@@ -169,7 +169,7 @@ const BookingForm = () => {
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="email" className="text-foreground font-medium">
-                    Email *
+                    Email
                   </Label>
                   <Input
                     id="email"
@@ -179,8 +179,7 @@ const BookingForm = () => {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     className="mt-2 border-border focus:border-primary"
-                    placeholder="your@email.com"
-                    required
+                    placeholder="your@email.com (optional)"
                   />
                 </div>
 
